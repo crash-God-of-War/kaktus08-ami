@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1><a href="{% url 'index' %}"><-Назад </a></h1>
+<h1>{{ news.title }}</h1>
+<h4>{{ news.created_date }}</h4>
+<p>{{ news.description }}</p>
+<img src="{{ news.image.url }}" style="height: 300px;">
+<video width="320" height="240" controls>
+  <source src="{{ news.video.url }}" type="video/mp4">
+</video>
+<audio controls>
+  <source src="{{ news.audio.url }}" type="audio/ogg">
+</audio>
+</body>
+</html>

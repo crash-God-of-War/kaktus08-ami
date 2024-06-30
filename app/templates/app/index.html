@@ -1,0 +1,17 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+{% for new in news %}
+    <hr>
+    <h1><a href="{% url 'detail' new.id %}">{{ new }}</a></h1>
+    <hr>
+{% endfor %}
+
+</body>
+</html>
